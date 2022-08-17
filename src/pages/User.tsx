@@ -26,14 +26,9 @@ function User() {
           id="user"
           className="userInput"
           placeholder="Username"
+          onChange={e => setUser(e.target.value)}
         />
-        <Link
-          onClick={() => {
-            setUser(document.getElementById('user').value! as HTMLInputElement)!
-            let { user } = useParams()
-          }}
-          to={`repos/${user}`}
-        >
+        <Link to={`repos/${user}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
