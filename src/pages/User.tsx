@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import '../styles/User.css'
 
 function User() {
-  const [user, setUser] = useState('')
+  const [user, setUser] = useState('placeholder')
 
   return (
     <div className="mainUser">
@@ -29,7 +29,7 @@ function User() {
         />
         <Link
           onClick={() => {
-            setUser(document.getElementById('user').value)
+            setUser(document.getElementById('user').value! as HTMLInputElement)!
             let { user } = useParams()
           }}
           to={`repos/${user}`}
