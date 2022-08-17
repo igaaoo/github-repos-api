@@ -1,24 +1,27 @@
-import { useFetch } from './hooks/useFetch'
-import { useEffect, useState } from 'react'
-import './styles/App.css'
+import { useParams } from 'react-router-dom'
+import { useFetch } from '../hooks/useFetch'
+import '../styles/Repos.css'
 
-type Repository = {
-  name: string
-  description: string
-  html_url: string
-  created_at: string
-}
+export function Repos() {
+  type Repository = {
+    name: string
+    description: string
+    html_url: string
+    created_at: string
+  }
 
-function App() {
+  const params = useParams()
+  const currentUser = params['*'] as string
+
   const {
     data: repositories,
     isFetching,
     owner,
-  } = useFetch<Repository[]>('https://api.github.com/users/igorNeves007/repos')
+  } = useFetch<Repository[]>(`https://api.github.com/users/${currentUser}/repos`)
 
   return (
     <div className="main">
-      {isFetching && <li>Loading...</li>}
+      {isFetching && <h2>Loading...</h2>}
       <h1>{owner}'s Repositories</h1>
 
       {repositories?.map(repo => {
@@ -37,5 +40,3 @@ function App() {
     </div>
   )
 }
-
-export default App
