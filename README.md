@@ -1,9 +1,9 @@
 # github-repos-api
  
-### You need to update the link with your nickname: <br>
-![image](https://user-images.githubusercontent.com/88206626/184215797-2edd86f7-b2a2-4abf-b1ae-0ade609c0656.png)
+### Write your username in the text input: <br>
+![image](https://user-images.githubusercontent.com/88206626/185015356-dcbfd993-aee4-4073-8d9d-1a08f3fce0ee.png)
 
-### Screenshot:
-![image](https://user-images.githubusercontent.com/88206626/184216018-03e3ccfe-fd63-472b-92bc-c998f3d8c8d3.png)
+### Repos Screen:
+![image](https://user-images.githubusercontent.com/88206626/185015429-1a2ce8dd-d1cc-40e5-b661-b5b95933e46f.png)
 
 
